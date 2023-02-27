@@ -4,6 +4,8 @@
   --primary-text-color: #2e2f42;
   --secondary-text-color: #434455;
   --hover-text-color: #404bbf;
+  --hover-transition-duration:250ms;
+  --hover-transition-timing-function:cubic-bezier(0.4,0.2,1);
 }
 
 body {
@@ -66,10 +68,15 @@ button{
   text-transform: uppercase;
   text-decoration: none;
   margin-right: 76px;
+  transition-property: color;
+  transition-duration:var(--hover-transition-duration);
+  transition-timing-function :var(--hover-transition-timing-function);
+
 }
 
 .logo-span {
   color: #4d5ae5;
+
 }
 .logo:focus,
 .logo:hover {
@@ -81,17 +88,36 @@ button{
   line-height: 1.5;
   color: var(--primary-font);
   text-decoration: none;
+  padding: 28px 0;
+  position: relative;
+}
+
+.nav-link.current::after{
+  position:absolute;
+  bottom: 0;
+  display: block;
+  width:100%; 
+  height: 4px;
+  content: '';
+  background-color:currentColor;
+  border-radius: 2px;
+  transition-property: color;
 }
 
 .nav-link:hover,
 .nav-link:focus {
+  transition-duration:var(--hover-transition-duration);
+  transition-timing-function :var(--hover-transition-timing-function);
   color: var(--hover-text-color);
+  
 }
+
 
 .nav-item {
   list-style: none;
   display: flex;
   align-items: center;
+
 }
 .nav-item li:not(:last-child) {
   margin-right: 40px;
@@ -114,6 +140,9 @@ button{
   line-height: 1.5;
   color: var(--secondary-text-color);
   text-decoration: none;
+  transition-property: color;
+  transition-duration:var(--hover-transition-duration);
+  transition-timing-function :var(--hover-transition-timing-function);
 }
 
 .contact-link:hover,
@@ -130,7 +159,7 @@ button{
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(/goit-markup-hw-04/images/hero-image.jpg);
+    url(../images/hero-image.jpg);
   background-size: 1440px;
   background-repeat: no-repeat;
   background-position: center;
@@ -162,7 +191,9 @@ button{
   line-height: 1.5;
   color: #ffffff;
   margin-top: 48px;
-  
+  transition-property: background-color;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
 }
 
 .button-hero:focus,
@@ -312,11 +343,15 @@ button{
   height: 40px;
   gap: 24px;
   fill:#4D5AE5;
+  transition-property: fill;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
 }
 .gallery-social-list-icon:hover,
 .gallery-social-list-icon:focus{
   fill:#404BBF;
 }
+
   
 
 
@@ -360,15 +395,17 @@ button{
   fill: #8E8F99;
   border: 1px solid rgba(142, 143, 153, 1);
   border-radius: 4px;
+  transition-property:fill,color;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
 }
 
 
 .customers-list-link:focus,
 .customers-list-link:hover{
-  fill: #404BBF;
-  border: 1px solid #404BBF;
+  fill:var(--hover-text-color);
+  border: 1px solid var(--hover-text-color);
   border-radius: 4px;
-  fill: #404BBF;
 }
 
 /* Футер */
@@ -397,10 +434,13 @@ button{
   color: #f4f4fd;
   text-transform: uppercase;
   text-decoration: none;
+  transition-property:color;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
 }
 .logo-f:hover,
 .logo-f:focus {
-  color: #4d5ae5;
+  color:var(--hover-text-color);
 }
 
 footer p {
@@ -433,6 +473,9 @@ color: #FFFFFF;
   justify-content: center;
   align-items: center;
   fill: rgba(255, 255, 255, 0.1);
+  transition-property: fill;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
 }
 .footer-social-list-link:hover,
 .footer-social-list-link:focus{
@@ -472,6 +515,9 @@ color: #FFFFFF;
   text-align: center;
   color: #4d5ae5;
   cursor: pointer;
+  transition-property:border-color,background-color;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
 }
 .prtf-button:hover,
 .prtf-button:focus {
@@ -495,12 +541,48 @@ color: #FFFFFF;
   margin-top: 72px;
   row-gap: 48px;
   column-gap: 24px;
+  transition-property: box-shadow;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
 }
 
 .prtf-title:hover,
 .prtf-title:focus{
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+.img-overley{
+  position: relative;
+  overflow: hidden;
+  width: 360px;
+
+}
+.overley{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  width: 360px;
+  background-color: var(--hover-text-color);
+  transform: translateY(100%);
+  transition: transform 250ms;
+}
+.img-overley:hover .overley{
+  transform:translateY(0%)
+}
+.overley-text{
+ padding-top:40px;
+ padding-left: 32px;
+ padding-right: 32px;
+ font-family:var(--primary-font);
+font-size: 16px;
+line-height: 1,5;
+letter-spacing: 0.02em;
+color: #F4F4FD;
+}
+
+
+
 .prtf-title h2 {
   font-weight: 500;
   font-size: 20px;
@@ -511,7 +593,7 @@ color: #FFFFFF;
   border-left: 1px solid rgba(231, 233, 252, 1);
   border-right: 1px solid rgba(231, 233, 252, 1);
 }
-.prtf-title p {
+.prtf-title-text{
   font-size: 16px;
   line-height: 24px;
   color: var(--secondary-text-color);
@@ -519,4 +601,55 @@ color: #FFFFFF;
   border-left: 1px solid rgba(231, 233, 252, 1);
   border-right: 1px solid rgba(231, 233, 252, 1);
   border-bottom: 1px solid rgba(231, 233, 252, 1);
+}
+
+/* Модал */
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+  background-color:rgba(46, 47, 66, 0.4);
+  transition-duration:var(--hover-transition-duration);
+  transition-timing-function :var(--hover-transition-timing-function);
+}
+.backdrop.is-hidden{
+  visibility: hidden;
+  pointer-events: none;
+   
+}
+.modal{
+  width: 100%;
+  height: 100%;
+  max-width: 408px;
+  max-height: 576px;
+  background-color: rgba(252, 252, 252, 1);
+  position: relative;
+  overflow: auto ;
+  transition-duration: var(--hover-transition-duration);
+  transition-timing-function: var(--hover-transition-timing-function);
+}
+.backdrop.is-hidden.modal{
+  transform: scale(0);
+}
+.modal-close{
+  position: absolute ;
+  top: 24px;
+  right: 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 24px;
+  height: 24px;
+  background-color: rgba(231, 233, 252, 1);
+
+}
+.modal-close-svg{
+  width: 8px;
+  height: 8px;
+  fill: rgba(0, 0, 0, 1);
 }
