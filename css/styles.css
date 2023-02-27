@@ -4,8 +4,8 @@
   --primary-text-color: #2e2f42;
   --secondary-text-color: #434455;
   --hover-text-color: #404bbf;
-  --hover-transition-duration:250ms;
-  --hover-transition-timing-function:cubic-bezier(0.4,0.2,1);
+  --hover-trans-duration:250ms;
+  --hover-trans-timing-function:cubic-bezier(0.4,0.2,1);
 }
 
 body {
@@ -69,9 +69,8 @@ button{
   text-decoration: none;
   margin-right: 76px;
   transition-property: color;
-  transition-duration:var(--hover-transition-duration);
-  transition-timing-function :var(--hover-transition-timing-function);
-
+  transition-duration:var(--hover-trans-duration);
+  transition-timing-function :var(--hover-trans-timing-function);
 }
 
 .logo-span {
@@ -109,8 +108,8 @@ button{
 
 .nav-link:hover,
 .nav-link:focus {
-  transition-duration:var(--hover-transition-duration);
-  transition-timing-function :var(--hover-transition-timing-function);
+  transition-duration:var(--hover-trans-duration);
+  transition-timing-function :var(--hover-trans-timing-function);
   color: var(--hover-text-color);
 }
 
@@ -143,8 +142,8 @@ button{
   color: var(--secondary-text-color);
   text-decoration: none;
   transition-property: color;
-  transition-duration:var(--hover-transition-duration);
-  transition-timing-function :var(--hover-transition-timing-function);
+  transition-duration:var(--hover-trans-duration);
+  transition-timing-function :var(--hover-trans-timing-function);
 }
 
 .contact-link:hover,
@@ -194,8 +193,8 @@ button{
   color: #ffffff;
   margin-top: 48px;
   transition-property: background-color;
-  transition-duration: var(--hover-transition-duration);
-  transition-timing-function: var(--hover-transition-timing-function);
+  transition-duration: var(--hover-trans-duration);
+  transition-timing-function: var(--hover-trans-timing-function);
 }
 
 .button-hero:focus,
@@ -344,8 +343,8 @@ button{
   width:40px;
   height:40px;
   transition-property: fill;
-  transition-duration: var(--hover-transition-duration);
-  transition-timing-function: var(--hover-transition-timing-function);
+  transition-duration: var(--hover-trans-duration);
+  transition-timing-function: var(--hover-trans-timing-function);
 
 }
 .gallery-social-list-link:hover,
@@ -397,8 +396,8 @@ button{
   width:168px;
   height: 88px;
   transition-property:fill,color;
-  transition-duration: var(--hover-transition-duration);
-  transition-timing-function: var(--hover-transition-timing-function);
+  transition-duration: var(--hover-trans-duration);
+  transition-timing-function: var(--hover-trans-timing-function);
 }
 
 
@@ -484,8 +483,8 @@ color: #FFFFFF;
   height: 40px;
   border-radius: 20px;
   transition-property:background-color;
-  transition-duration: var(--hover-transition-duration);
-  transition-timing-function: var(--hover-transition-timing-function);
+  transition-duration: var(--hover-trans-duration);
+  transition-timing-function: var(--hover-trans-timing-function);
 }
 
 .footer-social-list-link:hover,
@@ -529,8 +528,8 @@ color: #FFFFFF;
   color: #4d5ae5;
   cursor: pointer;
   transition-property:border-color,background-color;
-  transition-duration: var(--hover-transition-duration);
-  transition-timing-function: var(--hover-transition-timing-function);
+  transition-duration: var(--hover-trans-duration);
+  transition-timing-function: var(--hover-trans-timing-function);
 }
 .prtf-button:hover,
 .prtf-button:focus {
@@ -554,8 +553,8 @@ color: #FFFFFF;
 
 .prtf-title{
   transition-property: box-shadow;
-  transition-duration: var(--hover-transition-duration);
-  transition-timing-function: var(--hover-transition-timing-function);
+  transition-duration: var(--hover-trans-duration);
+  transition-timing-function: var(--hover-trans-timing-function);
 }
 .prtf-title-link{
 text-decoration: none;
@@ -576,7 +575,7 @@ text-decoration: none;
 }
 .prtf-title-text{
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1,5;
   color: var(--secondary-text-color);
   padding: 8px 0 32px 16px;
   border-left: 1px solid rgba(231, 233, 252, 1);
@@ -630,8 +629,8 @@ color: #F4F4FD;
   height: 100%;
   padding: 10px 0;
   background-color:rgba(46, 47, 66, 0.4);
-  transition-duration:var(--hover-transition-duration);
-  transition-timing-function :var(--hover-transition-timing-function);
+  transition-duration:var(--hover-trans-duration);
+  transition-timing-function :var(--hover-trans-timing-function);
 }
 .backdrop.is-hidden{
   visibility: hidden;
@@ -646,8 +645,8 @@ color: #F4F4FD;
   background-color: rgba(252, 252, 252, 1);
   position: relative;
   overflow: auto ;
-  transition-duration: var(--hover-transition-duration);
-  transition-timing-function: var(--hover-transition-timing-function);
+  transition-duration: var(--hover-trans-duration);
+  transition-timing-function: var(--hover-trans-timing-function);
 }
 .backdrop.is-hidden.modal{
   transform: scale(0);
