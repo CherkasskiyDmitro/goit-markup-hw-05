@@ -342,7 +342,7 @@ button{
   border-radius: 20px;
   width:40px;
   height:40px;
-  transition-property: fill;
+  transition-property: background-color;
   transition-duration: var(--hover-trans-duration);
   transition-timing-function: var(--hover-trans-timing-function);
 
@@ -390,11 +390,10 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  fill: #8E8F99;
+  fill:rgba(142, 143, 153, 1);
+  padding: 16px 32px 16px 32px;
   border: 1px solid rgba(142, 143, 153, 1);
   border-radius: 4px;
-  width:168px;
-  height: 88px;
   transition-property:fill,color;
   transition-duration: var(--hover-trans-duration);
   transition-timing-function: var(--hover-trans-timing-function);
@@ -407,15 +406,10 @@ button{
   border: 1px solid var(--hover-text-color);
   border-radius: 4px;
 }
-.customers-list-icon{
+ .customers-list-icon{
   width: 104px;
   height: 56px; 
-  fill: rgba(142, 143, 153, 1);
-}
-.customers-list-icon:focus,
-.customers-list-icon:hover{
-  fill:var(--hover-text-color);
-}
+} 
 
 /* Футер */
 .footer-container {
@@ -599,16 +593,16 @@ text-decoration: none;
   transform: translateY(100%);
   transition: transform 250ms;
 }
-.img-overley:hover .overley{
+.prtf-title-link:hover .overley{
   transform:translateY(0%); 
 }
-.img-overley:focus .overley{
+.prtf-title-link:focus .overley{
   transform:translateY(0%);
 }
 .overley-text{
  padding-top:40px;
  padding-left: 32px;
- padding-right: 32px;
+ padding-right: 32px;       
  font-family:var(--primary-font);
 font-size: 16px;    
 line-height: 1,5;
